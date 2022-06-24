@@ -12,7 +12,7 @@ def get_channels():
         developerKey=API_KEY
     )
     responses = youtube.search().list(
-        q=["ボクシング", "村田諒太"],
+        q=["ボクシング", "井上尚弥"],
         part="id,snippet",
         maxResults=100
     ).execute()
