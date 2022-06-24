@@ -52,6 +52,7 @@ def main():
             print(e)
         else:
             if (9400 <= subscriberCount <= 9800):
+                print(channel_id)
                 print(channel_title)
                 print(subscriberCount)
 
