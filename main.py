@@ -1,7 +1,13 @@
 from apiclient.discovery import build
 import pprint
+import json
 
 API_KEY = "***************************************"
+
+with open("./config.json", mode="r") as f:
+    contents = json.load(f)
+API_KEY = contents[0]["APIKey"]
+
 YOUTUBE_API_SERVICE_NAME = 'youtube'
 YOUTUBE_API_VERSION = 'v3'
 
@@ -51,7 +57,7 @@ def main():
         except Exception as e:
             print(e)
         else:
-            if (9400 <= subscriberCount <= 9800):
+            if (9400 <= subscriberCount <= 10000):
                 print(channel_id)
                 print(channel_title)
                 print(subscriberCount)
